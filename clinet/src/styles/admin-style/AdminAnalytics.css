@@ -1,0 +1,297 @@
+.admin-analytics-wrapper {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.admin-analytics-container {
+  background: transparent;
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  color: #f8fafc;
+  box-shadow: 0 0 12px #ff7f50;
+}
+
+/* Title */
+.analytics-h1 {
+  font-size: 3rem;
+  color: #fdfdfd;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0 8px #ff9900, 0 0 15px #ff5e00;
+}
+
+/* 🔹 Top Summary Cards */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-card {
+  background-color: #1a1a1a;
+  border-radius: 1.25rem;
+  padding: 2rem 1rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 12px #ff7f50, 0 0 16px #ff5e00;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.analytics-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 14px #ffaa00, 0 0 30px #ff5e00;
+  cursor: pointer;
+}
+
+.analytics-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #facc15;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.analytics-card p {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* 🔸 Bottom 2x2 Subcards */
+.analytics-subgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-subcard {
+  background-color: transparent;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 0 12px #ff7f50, 0 0 16px #ff5e00;
+  transition: transform 0.3s ease;
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  min-height: 260px;
+}
+
+.analytics-subcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 14px #ffaa00, 0 0 30px #ff5e00;
+  cursor: pointer;
+}
+
+.analytics-subcard h2 {
+  font-size: 1.2rem;
+  color: #facc15;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.analytics-subcard ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.analytics-subcard li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+/* ❌ Remove bullets */
+.analytics-subcard li::before {
+  content: none;
+}
+
+/* 🔸 Donut Chart */
+.donut-chart-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f8fafc;
+}
+
+.legend-color {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.legend-label {
+  min-width: 80px;
+}
+
+.legend-count {
+  font-weight: bold;
+}
+
+/* Chart Heading */
+.chart-heading {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  text-shadow: 0 0 4px #ff5e00;
+  cursor: pointer;
+}
+
+/* Loading & Error */
+.loading-msg,
+.error-msg {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  color: #f8fafc;
+}
+
+.error-msg {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+/* ⏳ Optional Deadline Card */
+.deadline-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 12px #ff5e00;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.deadline-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.deadline-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.task-title {
+  font-weight: 500;
+}
+
+.due-date {
+  color: #facc15;
+}
+
+/* ✅ Team Names Styling */
+.team-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.team-list li {
+  margin-bottom: 0.75rem;
+}
+
+/* 📱 Small Screens */
+@media (max-width: 768px) {
+  .analytics-h1 {
+    font-size: 2.25rem;
+  }
+
+  .analytics-card p {
+    font-size: 2rem;
+  }
+
+  .analytics-subcard h2 {
+    font-size: 1rem;
+  }
+}
+
+
+/* 🟠 Team Names Styling – Centered + Bigger */
+.team-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 500;
+  font-size: 2rem !important;
+}
+
+.team-list li {
+  margin-bottom: 0.75rem;
+}
+
+
+.project-progress-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  font-size: 2rem !important;
+ 
+}
+
+.progress-project-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+  font-size: 2rem !important;
+  margin-bottom: 1rem;
+}
+
+.progress-project-stats {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #d1d5db;
+  font-size: 1.2rem !important;
+ 
+}

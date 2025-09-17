@@ -1,0 +1,98 @@
+.admin-dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Static glowing border card */
+.card-border-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 240px;
+  border-radius: 2rem;
+  border: 3px solid transparent;
+  box-shadow: 0 0 10px #ff9900, 0 0 25px #ff5e00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.card-border-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px #ff9900, 0 0 32px #ff5e00;
+  border: 3px solid #ff9900;
+  cursor: pointer;
+}
+
+/* Inner content */
+.admin-card {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+  width: 100%;
+}
+
+.admin-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Large desktops */
+@media (min-width: 1200px) {
+  .admin-dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .card-border-wrapper {
+    height: 260px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .admin-dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .card-border-wrapper {
+    height: 240px;
+  }
+}
+
+/* Phones and small screens */
+@media (max-width: 767px) {
+  .admin-dashboard-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-border-wrapper {
+    height: 220px;
+  }
+
+  .admin-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .admin-card p {
+    font-size: 1rem;
+  }
+}

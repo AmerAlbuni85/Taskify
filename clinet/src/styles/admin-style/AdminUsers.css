@@ -1,0 +1,374 @@
+/* 🔥 Glowing user card */
+.user-card {
+  position: relative;
+  background: radial-gradient(#2c140000, #1a0a0000);
+  border-radius: 1rem;
+  border: 3px solid transparent;
+  box-shadow: 0 0 10px #ff9900, 0 0 25px #ff5e00;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  overflow: visible;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.user-card:hover {
+  box-shadow: 0 0 34px #ff9900, 0 0 72px #ff5e00;
+  outline: 5px solid #ff9900;
+}
+
+/* 🧱 Card Content */
+.user-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.user-card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #ddd;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* ✨ Action Buttons */
+.user-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.user-actions button {
+  background-color: transparent;
+  box-shadow: 0 0 10px #ff9900, 0 0 20px #ff5e00;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.user-actions button:hover {
+  background-color: #ff9900;
+  transform: translateY(-4px);
+}
+
+.add-button {
+  background-color: transparent;
+  box-shadow: 0 0 10px #ff9900, 0 0 20px #ff5e00;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-button:hover {
+  background-color: #ff9900;
+  transform: translateY(-6px);
+  box-shadow: 0 0 10px #ff9900, 0 0 20px #ff5e00;
+}
+
+/* 📄 Form Container */
+.user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: 87%;
+  max-width: 600px;
+  padding: 2rem;
+  box-shadow: #cc4500 0px 0px 30px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+}
+
+/* 🔡 Input Styling */
+.admin-input {
+  background-color: transparent;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ff9900;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 0 8px #ff5e00, 0 0 16px #ff9900;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.582);
+  font-size: 1rem;
+}
+
+/* 🧩 REACT SELECT STYLING */
+.react-select__control {
+  background-color: transparent !important;
+  border: 2px solid #ff9900 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 0 8px #ff5e00 !important;
+  font-size: 1rem;
+  color: white;
+  margin: 1rem 0;
+  overflow: visible !important;
+  min-height: 44px !important;
+}
+
+.react-select__value-container {
+  padding: 0.4rem 0.75rem !important;
+}
+
+.react-select__single-value {
+  color: white !important;
+  font-weight: bold;
+  overflow: hidden !important;
+}
+
+.react-select__menu {
+  margin-top: 2px !important;
+  background-color: #ff9900c9 !important;
+  color: white !important;
+  box-shadow: 0 0 10px #ff9900 !important;
+  border-radius: 0.5rem !important;
+  z-index: 9999 !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.react-select__menu-list {
+  padding: 0 !important;
+}
+
+.react-select__option {
+  background-color: transparent !important;
+  color: white !important;
+  cursor: pointer;
+  padding: 0.6rem 1rem !important;
+  font-size: 1rem;
+}
+
+.react-select__option--is-focused {
+  background-color: #ff9900b4 !important;
+  color: #1a0a00 !important;
+  font-weight: bold;
+}
+
+/* 🔠 Typography Overrides */
+h1,
+h2 {
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.user-h1 {
+  font-size: 3rem;
+  margin: 2rem auto;
+  text-shadow: 0 0 5px #fff, 0 0 10px #cc4500, 0 0 20px #cc4500,
+    0 0 40px #cc4500;
+  width: 100%;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 🧩 Responsive Grid Layout */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin: 2rem;
+  padding: 2rem 1rem;
+}
+
+/* 💻 Large Desktop */
+@media (min-width: 1200px) {
+  .user-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 2rem 2rem;
+  }
+
+  .user-card {
+    max-width: 500px;
+  }
+
+  .user-h1 {
+    font-size: 3.5rem;
+    max-width: 700px;
+  }
+}
+
+/* 📱 Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .user-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .user-card {
+    max-width: 14rem;
+  }
+
+  .user-h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 767px) {
+  .user-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .user-card {
+    max-width: 100%;
+  }
+
+  .user-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .user-card p {
+    font-size: 0.95rem;
+  }
+
+  .user-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .user-actions button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+    width: 100%;
+  }
+
+  .user-form {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .user-h1 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+}
+
+/* 🌌 Modal Styles */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.modal p {
+  color: #ddd;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.modal {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 8px #ff5e00, 0 0 16px #ff9900;
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.delete-btn {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.delete-btn:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #1a0a00;
+}
+.cancel-btn {
+  background: transparent;
+  box-shadow: 0 0 8px #ff5e00, 0 0 16px #ff9900;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+.cancel-btn:hover {
+background-color: #ff9900;
+  transform: translateY(-6px);
+  box-shadow: 0 0 10px #ff9900, 0 0 20px #ff5e00;
+}
+
+/* Total scrollbar area */
+::-webkit-scrollbar {
+  width: 8px; /* for vertical scrollbar */
+  height: 8px; /* for horizontal scrollbar */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+/* Thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+  background: #ff9900;
+  border-radius: 4px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5e00;
+}
+
+/* ✅ Prevent wide stretching of form */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
