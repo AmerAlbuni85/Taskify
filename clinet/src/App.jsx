@@ -17,14 +17,14 @@ import TeamLeadChat from "./pages/lead/TeamLeadChat";
 
 import MemberDashboard from "./pages/member/MemberDashboard";
 import MemberTaskBoard from "./pages/member/MemberTaskBoard";
-import MemberTaskDetail from "./pages/member/MemberTaskDetail"; // ✅ NEW
+import MemberTaskDetail from "./pages/member/MemberTaskDetail"; 
 import MemberTeamPage from "./pages/member/MemberTeamPage";
 import MemberChat from "./pages/member/MemberChat";
 
 import NotificationsPage from "./pages/NotificationsPage.jsx";
 
-import ForgotPassword from "./pages/ForgotPassword"; // ✅ NEW
-import ResetPassword from "./pages/ResetPassword"; // ✅ NEW
+import ForgotPassword from "./pages/ForgotPassword"; 
+import ResetPassword from "./pages/ResetPassword"; 
 
 import ProtectedRoute from "./router/ProtectedRoute";
 import Layout from "./components/Layout";
